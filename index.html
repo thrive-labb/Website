@@ -315,7 +315,6 @@
             background: linear-gradient(135deg, rgba(233, 122, 41, 0.1) 0%, rgba(79, 121, 66, 0.1) 100%);
             padding-top: 120px;
             padding-bottom: var(--space-xxl);
-            margin-bottom: var(--space-xl);
         }
 
         .hero-container {
@@ -556,7 +555,7 @@
 
         /* ===== About Section ===== */
         .about-section {
-            background-color: var(--gray-50);
+            background-color: var(--white);
         }
 
         .about-content {
@@ -603,7 +602,92 @@
             font-weight: 500;
         }
 
-        /* ===== Research Section ===== */
+        /* ===== Thrive Overview Section ===== */
+        .thrive-overview {
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+            padding: var(--space-xxl) 0;
+        }
+
+        .thrive-mission-card {
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-lg);
+            border-left: 5px solid var(--tiger-orange);
+            margin-bottom: var(--space-xl);
+        }
+
+        .thrive-quote {
+            font-family: var(--font-secondary);
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: var(--gray-700);
+            padding: var(--space-lg);
+            background-color: rgba(79, 121, 66, 0.05);
+            border-radius: var(--radius-lg);
+            position: relative;
+            margin: var(--space-xl) 0;
+        }
+
+        .thrive-quote i {
+            color: var(--fern-green);
+            opacity: 0.3;
+            font-size: 2rem;
+            position: absolute;
+            top: var(--space-sm);
+            left: var(--space-sm);
+        }
+
+        .thrive-quote p {
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-xl);
+        }
+
+        .thrive-quote-author {
+            font-weight: 600;
+            color: var(--tiger-orange);
+            text-align: right;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-xl) 0;
+        }
+
+        .mission-item {
+            background-color: var(--white);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: transform var(--transition-normal);
+            border-bottom: 3px solid var(--fern-green);
+        }
+
+        .mission-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .mission-item i {
+            font-size: 2.5rem;
+            color: var(--tiger-orange);
+            margin-bottom: var(--space-md);
+        }
+
+        .mission-item h4 {
+            color: var(--fern-green);
+            margin-bottom: var(--space-sm);
+        }
+
+        .mission-item p {
+            color: var(--gray-700);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* ===== Research Themes ===== */
         .research-section {
             background-color: var(--white);
         }
@@ -1036,6 +1120,51 @@
             font-size: 0.95rem;
         }
 
+        /* ===== Industry Collaboration Section ===== */
+        .industry-section {
+            background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+            padding: var(--space-xxl) 0;
+        }
+
+        .industry-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .industry-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray-700);
+        }
+
+        .industry-highlight {
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            margin: var(--space-xl) 0;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-200);
+        }
+
+        .industry-partners {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .partner-tag {
+            background-color: var(--gray-100);
+            color: var(--fern-green);
+            padding: 0.5rem 1.5rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 1rem;
+            border: 1px solid var(--gray-200);
+        }
+
         /* ===== Footer ===== */
         .footer {
             background-color: var(--fern-green);
@@ -1292,7 +1421,7 @@
         <div class="nav-container">
             <a href="#" class="nav-logo">
                 <img src="https://raw.githubusercontent.com/thrive-labb/thrive-labb.github.io/refs/heads/main/image.png" alt="Thrive Lab Logo" class="logo-img">
-                <span class="logo-text">Thrive Lab</span>
+                <span class="logo-text">THRIVE Lab</span>
             </a>
             <button class="mobile-toggle" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
@@ -1305,6 +1434,7 @@
                 <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
                 <li class="nav-item"><a href="#publications" class="nav-link">Publications</a></li>
                 <li class="nav-item"><a href="#join" class="nav-link">Join Us</a></li>
+                <li class="nav-item"><a href="#industry" class="nav-link">Collaborate</a></li>
                 <li class="nav-item">
                     <a href="https://github.com/thrive-labb/thrive-labb.github.io" class="nav-link" target="_blank">
                         <i class="fab fa-github"></i> GitHub
@@ -1325,14 +1455,14 @@
             <div class="hero-content">
                 <h1 class="hero-title">
                     <img src="https://raw.githubusercontent.com/thrive-labb/thrive-labb.github.io/refs/heads/main/image.png" alt="Thrive Lab Logo" class="hero-logo">
-                    Thrive Lab
+                    THRIVE Lab
                 </h1>
-                <p class="hero-subtitle">Advancing human potential through interdisciplinary research in cognitive science and neuropsychology</p>
+                <p class="hero-subtitle">Technology for Healthcare Research and Intervention in Everyday Life</p>
                 <div class="hero-tagline">
-                    <span class="tagline-text">"Cultivating resilience, fostering growth"</span>
+                    <span class="tagline-text">"Creating health technologies that understand people, not the other way around"</span>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#research" class="btn btn-primary">Explore Our Research</a>
+                    <a href="#about" class="btn btn-primary">Discover THRIVE</a>
                     <a href="#join" class="btn btn-secondary">Join Our Team</a>
                 </div>
             </div>
@@ -1358,7 +1488,7 @@
                     <p>We're thrilled to announce that Dr. Faith Matcham participated as a distinguished panelist at the Clean Slate Clinic White Paper Launch Event, contributing her expertise in digital mental health and cognitive resilience to this important initiative.</p>
                 </div>
                 <div class="news-highlight">
-                    <p><i class="fas fa-quote-left"></i> Technology gives us an unprecedented window into people’s daily lives; but its true value emerges only when we build it with empathy, curiosity, and a commitment to equity. THRIVE is about creating health technologies that understand people, not the other way around.</p>
+                    <p><i class="fas fa-quote-left"></i> Technology gives us an unprecedented window into people's daily lives; but its true value emerges only when we build it with empathy, curiosity, and a commitment to equity. THRIVE is about creating health technologies that understand people, not the other way around.</p>
                     <p style="margin-top: var(--space-xs); font-weight: 600;">— Dr Faith Matcham, Founder of THRIVE</p>
                 </div>
                 <div class="news-buttons">
@@ -1373,34 +1503,56 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
+    <!-- About Section with THRIVE Overview -->
+    <section id="about" class="thrive-overview">
         <div class="container">
-            <h2 class="section-title">About Thrive Lab</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Led by Dr. Faith Matcham at the University of Sussex, we're a vibrant research team at the intersection of cognitive science, neuropsychology, and human development. Our mission is to understand the mechanisms that enable individuals and communities to thrive in challenging environments.</p>
-                    <p>At Thrive Lab, we investigate cognitive resilience, neuroplasticity, and well-being through multimodal approaches—recording signals from the body (ECG, EDA) and brain (EEG, fNIRS), and analyzing data using advanced computational models (Bayesian statistics, dynamical systems, machine learning).</p>
-                    <p>We also develop open-source tools and methodologies to advance psychological science and make research more accessible, reproducible, and impactful.</p>
+            <h2 class="section-title">Welcome to THRIVE</h2>
+            
+            <div class="thrive-mission-card">
+                <p style="font-size: 1.2rem; line-height: 1.8;">THRIVE (Technology for Healthcare Research and Intervention in Everyday Life) is a research group dedicated to understanding and improving mental and physical health through digital innovation. We design, evaluate, and implement technologies that make health support more personalised, timely, and reflective of people's real lives. Our work spans digital sensing, wearable and smartphone data, human-centred design, behaviour change, and lived-experience-driven intervention development across the lifespan.</p>
+                
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-top: var(--space-lg);">At THRIVE, we believe that technology should fit into everyday routines, not the other way around. Our research combines psychological science with data analytics, engineering, design, and community partnership to create tools and systems that genuinely work for the people who use them.</p>
+            </div>
+
+            <div class="thrive-quote">
+                <i class="fas fa-quote-left"></i>
+                <p>"Technology gives us an unprecedented window into people's daily lives; but its true value emerges only when we build it with empathy, curiosity, and a commitment to equity. THRIVE is about creating health technologies that understand people, not the other way around."</p>
+                <p class="thrive-quote-author">— Dr Faith Matcham, Founder of THRIVE</p>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: var(--space-lg); color: var(--fern-green);">Our Mission</h3>
+            
+            <div class="mission-grid">
+                <div class="mission-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Deepen Understanding</h4>
+                    <p>To use digital data to deepen understanding of health, wellbeing, and everyday behaviour</p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-number">12+</div>
-                        <div class="stat-label">Researchers</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">45+</div>
-                        <div class="stat-label">Publications</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">6</div>
-                        <div class="stat-label">Active Projects</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">8</div>
-                        <div class="stat-label">Open-Source Tools</div>
-                    </div>
+                <div class="mission-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h4>Co-design Interventions</h4>
+                    <p>To co-design interventions that are acceptable, accessible, and effective for diverse communities</p>
                 </div>
+                <div class="mission-item">
+                    <i class="fas fa-link"></i>
+                    <h4>Bridge Disciplines</h4>
+                    <p>To bridge psychological science, data science, engineering, and real-world lived experience</p>
+                </div>
+                <div class="mission-item">
+                    <i class="fas fa-heart"></i>
+                    <h4>Improve Outcomes</h4>
+                    <p>To improve mental and physical health outcomes across all ages and contexts</p>
+                </div>
+            </div>
+
+            <div style="background-color: var(--white); border-radius: var(--radius-lg); padding: var(--space-xl); margin-top: var(--space-xl);">
+                <h3 style="color: var(--tiger-orange); margin-bottom: var(--space-md);">The Journey to THRIVE</h3>
+                <p>THRIVE is the culmination of more than a decade of work at the intersection of mental health, physical health, and digital technology.</p>
+                <p>Dr Faith Matcham began her career as a researcher working within NHS services, where she saw firsthand how closely mental and physical health are intertwined, and how challenging it can be to measure and support people's wellbeing using traditional clinical tools alone. These early clinical and research experiences led her to train as a Health Psychologist, specialising in the complex interface between mind and body. During this training, Faith became particularly interested in how people engage with technology, and how technology use itself can be conceptualised as a health behaviour. This perspective now underpins much of her work: applying principles of health psychology to understand, design, and evaluate digital tools that genuinely support wellbeing in everyday life.</p>
+                <p>Her PhD research at King's College London examined mental health in rheumatoid arthritis, laying the foundation for a career focused on multimorbidity, digital health, and complex real-world data. Faith went on to play a central role in major international initiatives—including the RADAR-CNS programme—where she helped develop methods for using smartphones and wearables to detect early signs of relapse in depression. This work has since shaped global conversations around remote monitoring, engagement, and digital biomarkers.</p>
+                <p>Over time, Faith's research expanded beyond depression into areas such as loneliness in later life, chronic pain, caregiving stress, digital sensing in underserved communities, and human-centred design for assistive technologies. Her portfolio now includes over 100 peer-reviewed publications, £3.8 million in collaborative funding, and partnerships with engineers, clinicians, computer scientists, charities, policymakers, and community groups across Europe and beyond.</p>
+                <p>A key throughline of Faith's work has been her commitment to equity, acceptability, and lived-experience-driven development, ensuring that digital tools reflect the needs of the people who rely on them. Through qualitative research, co-design, community engagement, and interdisciplinary collaboration, she has championed approaches that make technology more inclusive, especially for seldom-heard groups.</p>
+                <p>In 2023, after joining the University of Sussex as Associate Professor, Faith began to bring her research strands together under a single vision: a lab that treats everyday life as the richest source of data and insight. THRIVE emerged from this vision.</p>
             </div>
         </div>
     </section>
@@ -1408,54 +1560,111 @@
     <!-- Research Themes -->
     <section id="research" class="section research-section">
         <div class="container">
-            <h2 class="section-title">Research Themes</h2>
+            <h2 class="section-title">Our Research Focus</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto var(--space-xl); color: var(--gray-700);">THRIVE supports work across a diverse range of interconnected research areas</p>
+            
             <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="research-title">Digital Sensing in Long-term Conditions</h3>
+                    <p class="research-desc">Using smartphones and wearables to monitor symptoms, predict relapse, and understand daily experiences in chronic illness.</p>
+                    <div class="research-tags">
+                        <span class="tag">Wearables</span>
+                        <span class="tag">Remote Monitoring</span>
+                        <span class="tag">Chronic Illness</span>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="research-title">AI-Augmented Digital Interventions</h3>
+                    <p class="research-desc">Developing and evaluating interventions enhanced by artificial intelligence to provide personalised, adaptive support.</p>
+                    <div class="research-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Personalisation</span>
+                        <span class="tag">Adaptive Systems</span>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="research-title">Human-Centred Design for Loneliness & Ageing</h3>
+                    <p class="research-desc">Co-designing smart systems with older adults to detect and address loneliness through acceptable, integrated technologies.</p>
+                    <div class="research-tags">
+                        <span class="tag">Co-design</span>
+                        <span class="tag">Ageing</span>
+                        <span class="tag">Loneliness</span>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="research-title">Just-in-Time Adaptive Interventions (JITAIs)</h3>
+                    <p class="research-desc">Creating interventions that deliver support at the right moment, adapted to an individual's changing context and needs.</p>
+                    <div class="research-tags">
+                        <span class="tag">Real-time</span>
+                        <span class="tag">Context-aware</span>
+                        <span class="tag">Behaviour Change</span>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="research-title">Smartphone & Wearable Prediction Modelling</h3>
+                    <p class="research-desc">Building predictive models from passive sensing data to forecast health outcomes and enable proactive care.</p>
+                    <div class="research-tags">
+                        <span class="tag">Predictive Analytics</span>
+                        <span class="tag">Passive Sensing</span>
+                        <span class="tag">Digital Biomarkers</span>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="research-title">Community-Co-Developed Approaches</h3>
+                    <p class="research-desc">Working alongside communities to tackle loneliness and health inequalities through culturally appropriate, participatory methods.</p>
+                    <div class="research-tags">
+                        <span class="tag">Community Engagement</span>
+                        <span class="tag">Health Inequalities</span>
+                        <span class="tag">Participatory</span>
+                    </div>
+                </div>
+
                 <div class="research-card">
                     <div class="research-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3 class="research-title">Cognitive Resilience</h3>
-                    <p class="research-desc">Investigating the neurocognitive mechanisms that enable individuals to maintain or regain cognitive function in the face of stress, aging, or neurological challenges.</p>
+                    <h3 class="research-title">Applied Machine Learning for Symptom Tracking</h3>
+                    <p class="research-desc">Using advanced analytics to understand symptom patterns and support rehabilitation in neurological and mental health conditions.</p>
                     <div class="research-tags">
-                        <span class="tag">EEG/fMRI</span>
-                        <span class="tag">Stress Response</span>
-                        <span class="tag">Executive Function</span>
+                        <span class="tag">Symptom Tracking</span>
+                        <span class="tag">Rehabilitation</span>
+                        <span class="tag">Neurology</span>
                     </div>
                 </div>
+
                 <div class="research-card">
                     <div class="research-icon">
-                        <i class="fas fa-seedling"></i>
+                        <i class="fas fa-clipboard-check"></i>
                     </div>
-                    <h3 class="research-title">Neuroplasticity & Growth</h3>
-                    <p class="research-desc">Exploring how experiences, interventions, and learning reshape brain structure and function across the lifespan.</p>
+                    <h3 class="research-title">Mixed-Methods Evaluations</h3>
+                    <p class="research-desc">Combining quantitative and qualitative approaches to evaluate digital health tools in real-world contexts.</p>
                     <div class="research-tags">
-                        <span class="tag">Learning</span>
-                        <span class="tag">Intervention Studies</span>
-                        <span class="tag">Longitudinal Design</span>
-                    </div>
-                </div>
-                <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3 class="research-title">Psychophysiological Integration</h3>
-                    <p class="research-desc">Examining how bodily signals (ECG, EDA, respiration) interact with cognitive and emotional processes to influence well-being.</p>
-                    <div class="research-tags">
-                        <span class="tag">ECG/EDA</span>
-                        <span class="tag">Embodied Cognition</span>
-                        <span class="tag">Biofeedback</span>
-                    </div>
-                </div>
-                <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3 class="research-title">Methodological Innovation</h3>
-                    <p class="research-desc">Developing and validating open-source tools for neuropsychological assessment, data analysis, and reproducible research.</p>
-                    <div class="research-tags">
-                        <span class="tag">Open Science</span>
-                        <span class="tag">Software Development</span>
-                        <span class="tag">Bayesian Methods</span>
+                        <span class="tag">Mixed Methods</span>
+                        <span class="tag">Real-world Evidence</span>
+                        <span class="tag">Implementation</span>
                     </div>
                 </div>
             </div>
@@ -1479,8 +1688,8 @@
                     </div>
                     <div class="team-info">
                         <h3 class="team-name">Dr. Faith Matcham</h3>
-                        <p class="team-title">Principal Investigator & Senior Research Fellow</p>
-                        <p class="team-bio">Leading research in digital mental health, psychological interventions, and cognitive resilience. Expert in longitudinal studies and mixed-methods approaches to understanding mental health outcomes.</p>
+                        <p class="team-title">Founder & Principal Investigator</p>
+                        <p class="team-bio">Leading research in digital mental health, psychological interventions, and cognitive resilience. Expert in longitudinal studies and mixed-methods approaches to understanding mental health outcomes. Over 100 peer-reviewed publications and £3.8M in collaborative funding.</p>
                         <div class="team-links">
                             <a href="mailto:F.Matcham@sussex.ac.uk" class="team-link" title="Email">
                                 <i class="fas fa-envelope"></i>
@@ -1512,7 +1721,7 @@
                     <div class="team-info">
                         <h3 class="team-name">Dr. Jordan Lee</h3>
                         <p class="team-title">Postdoctoral Researcher</p>
-                        <p class="team-bio">Expert in EEG signal processing and computational modeling of neural dynamics. Focuses on machine learning applications in cognitive neuroscience.</p>
+                        <p class="team-bio">Expert in EEG signal processing and computational modeling of neural dynamics. Focuses on machine learning applications in cognitive neuroscience and digital phenotyping.</p>
                         <div class="team-links">
                             <a href="#" class="team-link" title="Email">
                                 <i class="fas fa-envelope"></i>
@@ -1536,7 +1745,7 @@
                     <div class="team-info">
                         <h3 class="team-name">Dr. Sam Chen</h3>
                         <p class="team-title">Research Scientist</p>
-                        <p class="team-bio">Develops open-source tools for psychophysiological data analysis and visualization. Specializes in reproducible research practices.</p>
+                        <p class="team-bio">Develops open-source tools for psychophysiological data analysis and visualization. Specializes in reproducible research practices and digital biomarker development.</p>
                         <div class="team-links">
                             <a href="#" class="team-link" title="Email">
                                 <i class="fas fa-envelope"></i>
@@ -1560,7 +1769,7 @@
                     <div class="team-info">
                         <h3 class="team-name">Taylor Rodriguez</h3>
                         <p class="team-title">PhD Candidate</p>
-                        <p class="team-bio">Investigates the effects of mindfulness interventions on cognitive resilience in high-stress populations using neuroimaging methods.</p>
+                        <p class="team-bio">Investigates the effects of mindfulness interventions on cognitive resilience in high-stress populations using neuroimaging and wearable sensing methods.</p>
                         <div class="team-links">
                             <a href="#" class="team-link" title="Email">
                                 <i class="fas fa-envelope"></i>
@@ -1584,7 +1793,7 @@
                     <div class="team-info">
                         <h3 class="team-name">Morgan Kim</h3>
                         <p class="team-title">PhD Candidate</p>
-                        <p class="team-bio">Studies developmental neuroplasticity and cognitive growth in children from diverse backgrounds using longitudinal designs.</p>
+                        <p class="team-bio">Studies developmental neuroplasticity and cognitive growth in children from diverse backgrounds using longitudinal designs and digital sensing.</p>
                         <div class="team-links">
                             <a href="#" class="team-link" title="Email">
                                 <i class="fas fa-envelope"></i>
@@ -1608,7 +1817,7 @@
                     <div class="team-info">
                         <h3 class="team-name">Casey Williams</h3>
                         <p class="team-title">Lab Manager & Research Coordinator</p>
-                        <p class="team-bio">Ensures smooth lab operations and coordinates participant recruitment across all studies. Manages ethics applications and data management.</p>
+                        <p class="team-bio">Ensures smooth lab operations and coordinates participant recruitment across all studies. Manages ethics applications, data management, and community partnerships.</p>
                         <div class="team-links">
                             <a href="#" class="team-link" title="Email">
                                 <i class="fas fa-envelope"></i>
@@ -1620,7 +1829,7 @@
             </div>
             
             <div class="team-note">
-                <p>We collaborate with researchers from psychology, neuroscience, computer science, and public health. Interested in joining our team? <a href="#join">See opportunities below</a>.</p>
+                <p>We collaborate with researchers from psychology, neuroscience, computer science, engineering, and public health. Interested in joining our team? <a href="#join">See opportunities below</a>.</p>
             </div>
         </div>
     </section>
@@ -1631,125 +1840,165 @@
             <h2 class="section-title">Recent Publications</h2>
             <div class="publications-controls">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="2023">2026</button>
-                <button class="filter-btn" data-filter="2022">2025</button>
-                <button class="filter-btn" data-filter="2021">Rest</button>
-                     <a href="https://profiles.sussex.ac.uk/p199181-faith-matcham/publications" class="publications-controls" target="_blank"><i class="fas fa-external-link-alt"></i> REST</a>
-                    
+                <button class="filter-btn" data-filter="2026">2026</button>
+                <button class="filter-btn" data-filter="2025">2025</button>
+                <a href="https://profiles.sussex.ac.uk/p199181-faith-matcham/publications" class="btn btn-outline" target="_blank" style="margin-left: var(--space-sm);">
+                    <i class="fas fa-external-link-alt"></i> View All (200+)
+                </a>
             </div>
          
             <div class="publications-list">
-    <!-- 2026 Publications -->
-    <div class="publication-card" data-year="2026">
-        <div class="pub-badge">2026</div>
-        <h3 class="pub-title">Smart wearable sensing systems mediating the digital monitoring of Loneliness – A review</h3>
-        <p class="pub-authors">Mexia N, Molteni E, Ratcliffe J, <strong>Matcham F</strong>, et al.</p>
-        <p class="pub-journal">Materials Today Electronics, Elsevier BV, Feb 2026</p>
-        <div class="pub-links">
-            <a href="https://doi.org/10.1016/j.mtelec.2026.100202" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-            <a href="https://pdf.sciencedirectassets.com/781089/AIP/1-s2.0-S2772949426000070/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEFIaCXVzLWVhc3QtMSJGMEQCIFvlT7uebKDPil%2B6YAw8831iNn792glFalqtBsif20aQAiAVbRhasgLPqzjF86ep7qLWhsw2Bka89B49dKZwqn14dyqzBQgbEAUaDDA1OTAwMzU0Njg2NSIMuTIshxmKG%2FRIIh2BKpAFicezJ%2BunoV%2FnJYQyc5nloS3D1necA%2FuugNVnXxJ4i1HtGORMbQzH4sTuTWsC9jyokJvZGStbn2YwgUtbYFoOymx3SxVmpPa2YPesspAgZjsL4wut%2BdvutONc19gy8%2FnfyOb%2BQ1ZKrnXKRQCnAuxFCujaetV4PvliuW58I%2FlWlNI8d7vFV%2Bb%2Bv59MKRgy1SDxQLy2DYQaqLVh7BxOhO%2BYYb9Za20Rb2G9ON9rByguB348mKGZwamMfb8iHdJoPAZcS8ENvyfnsDFaUuU%2BsSRfWl3eilanaK0rjZT1NBa14%2Fcs5tzW7Z9H8ges4nrkICmNJwEI8AfrEm%2B62aPnbgZZ9DpcNdEvhOqGgW4bKD96KFeFEjLOm13ZaoK0QICjGNxn%2B9Yajd7LLGnWBwjvzMPI8OH5zvTvrJLEBaOZJhn0KkZS%2BvDYksxCEhXe0Yvu2RfEgcItMFLWxLAZvRWlwRUNTsB84NtzIi9tOhYlH%2BC3hxlJnSLg2GopQ0nMzfczjggsJT4x5OeNTUcoc5JaMcEdw6tBsd46F8hk63NKW1%2Bp9xiHbR62YaPFGuLm4%2FwwbPdGmwroN4YkK0fSIzuvY%2F7IykTQeoQaUBf9x%2BmWZP8%2B24gYtRQZXopVo5x1nmcNHoazjKgLH3s5h1MfTfJfokJeX1gO2fD1wzwhLl%2FHgHjwjYDqpO4bBN8A1tlwHmnQe2otcHEQYN9eCKKcbOCf1EPf%2BlLaBe6qlkh9vf10eZmowikOEV4Hwsk1EVb9orrrYN6QGviAV4Sv1eXxhYL24ZtNeGQdSSfHOWHUOlZLkBlrpsxQDRvveYx6qRMSdBfn5mxL4ulOdSuwNF2yTTlV%2FA22x5i24BgIm3arGLVvGGg3tZwwv6vGzAY6sgFwyrccNqZwp4DJcH0WFHsllTTEc%2Bi%2F1FuLfA0HjR6smetT7%2BHjNat%2FrJaYwsOwOWqTdPPGxkPYOD%2Fn4gbxeo6TqmXgih1YkUPG61YKDZ3F2Yi29i41y2gySXVttFyoIbB8s0TqmwnDy9fZVuzZ%2FC9oDidONTpdKQDhhqQq6KLDeXRFL0cUzPzupvj73paiaspFobBYIwaPM5RjgrY1TSCtksqYibTrq6GnuzwOs6tC%2F5gJ&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260215T105357Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYWCBWETS2%2F20260215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a37172bfbea3e493bc7fc703ead350f14798994435d9cd8659aa630bf3cd69ad&hash=56111d0e696d4e23ad661bf29b46500993952f8c55404130482ceed69445203e&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S2772949426000070&tid=spdf-11f73d67-f0cf-4b77-8962-5b3a98044ed4&sid=b385ff3d388270468088b3e558f182a7b141gxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=030557050757555d02&rr=9ce443aebb51a17a&cc=gb" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-        </div>
-    </div>
+                <!-- 2026 Publications -->
+                <div class="publication-card" data-year="2026">
+                    <div class="pub-badge">2026</div>
+                    <h3 class="pub-title">Smart wearable sensing systems mediating the digital monitoring of Loneliness – A review</h3>
+                    <p class="pub-authors">Mexia N, Molteni E, Ratcliffe J, <strong>Matcham F</strong>, et al.</p>
+                    <p class="pub-journal">Materials Today Electronics, Elsevier BV, Feb 2026</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.mtelec.2026.100202" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                    </div>
+                </div>
 
-    <div class="publication-card" data-year="2026">
-        <div class="pub-badge">2026</div>
-        <h3 class="pub-title">Understanding caregiver stress to inform community-based stress monitoring and supportive interventions: a qualitative, descriptive study</h3>
-        <p class="pub-authors">Sian S, Emily F, Chee SA, <strong>Matcham F</strong>, et al.</p>
-        <p class="pub-journal">Health & Social Care in the Community, John Wiley & Sons Ltd, Jan 2026</p>
-        <div class="pub-links">
-            <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> Publisher Link</a>
-        </div>
-    </div>
+                <div class="publication-card" data-year="2026">
+                    <div class="pub-badge">2026</div>
+                    <h3 class="pub-title">Development and user-centered evaluation of smart systems for loneliness monitoring in older adults: mixed methods study</h3>
+                    <p class="pub-authors">Zhou Y, Rees J, <strong>Matcham F</strong>, et al.</p>
+                    <p class="pub-journal">Journal of Medical Internet Research, 28, JMIR Publications Inc., Jan 2026</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.2196/81027" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                    </div>
+                </div>
 
-    <div class="publication-card" data-year="2026">
-        <div class="pub-badge">2026</div>
-        <h3 class="pub-title">Development and user-centered evaluation of smart systems for loneliness monitoring in older adults: mixed methods study</h3>
-        <p class="pub-authors">Zhou Y, Rees J, <strong>Matcham F</strong>, et al.</p>
-        <p class="pub-journal">Journal of Medical Internet Research, 28, JMIR Publications Inc., Jan 2026</p>
-        <div class="pub-links">
-            <a href="https://doi.org/10.2196/81027" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-        </div>
-    </div>
+                <div class="publication-card" data-year="2026">
+                    <div class="pub-badge">2026</div>
+                    <h3 class="pub-title">Systematic evaluation of commercially available pain-management mHealth apps for chronic pain in the United Kingdom</h3>
+                    <p class="pub-authors">Harding R, Gillett JL, Passaportis M, <strong>Matcham F</strong>, et al.</p>
+                    <p class="pub-journal">British Journal of Health Psychology, 31(1), Wiley, Jan 2026</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1111/bjhp.70053" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                    </div>
+                </div>
 
-    <div class="publication-card" data-year="2026">
-        <div class="pub-badge">2026</div>
-        <h3 class="pub-title">Systematic evaluation of commercially available pain-management mHealth apps for chronic pain in the United Kingdom</h3>
-        <p class="pub-authors">Harding R, Gillett JL, Passaportis M, <strong>Matcham F</strong>, et al.</p>
-        <p class="pub-journal">British Journal of Health Psychology, 31(1), Wiley, Jan 2026</p>
-        <div class="pub-links">
-            <a href="https://doi.org/10.1111/bjhp.70053" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-        </div>
-    </div>
+                <!-- 2025 Publications -->
+                <div class="publication-card" data-year="2025">
+                    <div class="pub-badge">2025</div>
+                    <h3 class="pub-title">Barriers and facilitators of engagement with app-based pain self-management strategies among chronic pain patients (CPPs)</h3>
+                    <p class="pub-authors">Harding R, Passaportis M, Miles E, <strong>Matcham F</strong></p>
+                    <p class="pub-journal">Journal of Health Psychology, SAGE, Jan 2026 (Online 2025)</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1177/13591053251406436" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                    </div>
+                </div>
 
-    <!-- 2025 Publications -->
-    <div class="publication-card" data-year="2025">
-        <div class="pub-badge">2025</div>
-        <h3 class="pub-title">Barriers and facilitators of engagement with app-based pain self-management strategies among chronic pain patients (CPPs)</h3>
-        <p class="pub-authors">Harding R, Passaportis M, Miles E, <strong>Matcham F</strong></p>
-        <p class="pub-journal">Journal of Health Psychology, SAGE, Jan 2026 (Online 2025)</p>
-        <div class="pub-links">
-            <a href="https://doi.org/10.1177/13591053251406436" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-        </div>
-    </div>
+                <div class="publication-card" data-year="2025">
+                    <div class="pub-badge">2025</div>
+                    <h3 class="pub-title">"What does the word loneliness mean to you?" Reflections on co-developing public engagement workshops... with older adults from ethnically diverse groups</h3>
+                    <p class="pub-authors">Rees J, Sajid M, Steele C, <strong>Matcham F</strong>, et al.</p>
+                    <p class="pub-journal">Research Involvement and Engagement, 11(1), Springer, Dec 2025</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1186/s40900-025-00800-5" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                    </div>
+                </div>
 
-    <div class="publication-card" data-year="2025">
-        <div class="pub-badge">2025</div>
-        <h3 class="pub-title">"What does the word loneliness mean to you?" Reflections on co-developing public engagement workshops... with older adults from ethnically diverse groups</h3>
-        <p class="pub-authors">Rees J, Sajid M, Steele C, <strong>Matcham F</strong>, et al.</p>
-        <p class="pub-journal">Research Involvement and Engagement, 11(1), Springer, Dec 2025</p>
-        <div class="pub-links">
-            <a href="https://doi.org/10.1186/s40900-025-00800-5" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-        </div>
-    </div>
+                <div class="publication-card" data-year="2025">
+                    <div class="pub-badge">2025</div>
+                    <h3 class="pub-title">Exploring biases related to the use of large language models in a multilingual depression corpus</h3>
+                    <p class="pub-authors">Perez-Toro PA, Dineley J, Iniesta R, <strong>Matcham F</strong>, et al.</p>
+                    <p class="pub-journal">Scientific Reports, 15(1), Springer, Dec 2025</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1038/s41598-025-19980-x" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                    </div>
+                </div>
 
-    <div class="publication-card" data-year="2025">
-        <div class="pub-badge">2025</div>
-        <h3 class="pub-title">Exploring biases related to the use of large language models in a multilingual depression corpus</h3>
-        <p class="pub-authors">Perez-Toro PA, Dineley J, Iniesta R, <strong>Matcham F</strong>, et al.</p>
-        <p class="pub-journal">Scientific Reports, 15(1), Springer, Dec 2025</p>
-        <div class="pub-links">
-            <a href="https://doi.org/10.1038/s41598-025-19980-x" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-        </div>
-    </div>
+                <div class="publication-card" data-year="2025" data-tags="preprint">
+                    <div class="pub-badge">Preprint</div>
+                    <h3 class="pub-title">Multilingual Lexical Feature Analysis of Spoken Language for Predicting Major Depression Symptom Severity</h3>
+                    <p class="pub-authors">Tokareva A, Dineley J, Firth Z, <strong>Matcham F</strong>, et al.</p>
+                    <p class="pub-journal">arXiv, Nov 2025</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.48550/arxiv.2511.07011" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                    </div>
+                </div>
 
-    <div class="publication-card" data-year="2025" data-tags="preprint">
-        <div class="pub-badge">Preprint</div>
-        <h3 class="pub-title">Multilingual Lexical Feature Analysis of Spoken Language for Predicting Major Depression Symptom Severity</h3>
-        <p class="pub-authors">Tokareva A, Dineley J, Firth Z, <strong>Matcham F</strong>, et al.</p>
-        <p class="pub-journal">arXiv, Nov 2025</p>
-        <div class="pub-links">
-            <a href="https://doi.org/10.48550/arxiv.2511.07011" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                <div class="publication-card" data-year="2025">
+                    <div class="pub-badge">2025</div>
+                    <h3 class="pub-title">Adherence to actigraphic devices in elementary school–aged children: systematic review and meta-analysis</h3>
+                    <p class="pub-authors">Morris AC, Seker A, Telesia L, <strong>Matcham F</strong>, et al.</p>
+                    <p class="pub-journal">Journal of Medical Internet Research, 27, JMIR Publications Inc., Nov 2025</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.2196/79718" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                    </div>
+                </div>                
+            </div>
+            
+            <div class="publications-footer">
+                <p class="pub-note">For a complete and up-to-date list of our 200+ publications, visit Dr. Matcham's <a href="https://profiles.sussex.ac.uk/p199181-faith-matcham/publications" target="_blank">University of Sussex profile</a>.</p>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="publication-card" data-year="2025">
-        <div class="pub-badge">2025</div>
-        <h3 class="pub-title">Adherence to actigraphic devices in elementary school–aged children: systematic review and meta-analysis</h3>
-        <p class="pub-authors">Morris AC, Seker A, Telesia L, <strong>Matcham F</strong>, et al.</p>
-        <p class="pub-journal">Journal of Medical Internet Research, 27, JMIR Publications Inc., Nov 2025</p>
-        <div class="pub-links">
-            <a href="https://doi.org/10.2196/79718" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-        </div>
-    </div>
+    <!-- Industry Collaboration Section -->
+    <section id="industry" class="industry-section">
+        <div class="container">
+            <h2 class="section-title">Industry Collaboration at THRIVE</h2>
+            
+            <div class="industry-content">
+                <p>A defining feature of THRIVE is its commitment to meaningful, reciprocal collaboration with industry partners. Across her career, Dr Faith Matcham has worked with organisations ranging from digital health start-ups to global pharmaceutical companies, providing expertise in behaviour change, remote monitoring, intervention design, user engagement, and real-world evaluation.</p>
                 
-</div>
-    
+                <div class="industry-highlight">
+                    <h3 style="color: var(--fern-green); margin-bottom: var(--space-md);">How We Collaborate</h3>
+                    <p>THRIVE builds on this foundation by working closely with companies developing digital therapeutics, wearable technologies, sensing systems, health platforms, and AI-enabled tools. Our collaborations span:</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-md); margin-top: var(--space-lg);">
+                        <div style="text-align: left;">
+                            <ul style="list-style: none;">
+                                <li style="margin-bottom: var(--space-sm);"><i class="fas fa-check-circle" style="color: var(--fern-green); margin-right: var(--space-xs);"></i> Co-design of digital health products</li>
+                                <li style="margin-bottom: var(--space-sm);"><i class="fas fa-check-circle" style="color: var(--fern-green); margin-right: var(--space-xs);"></i> Evaluation of feasibility and acceptability</li>
+                                <li style="margin-bottom: var(--space-sm);"><i class="fas fa-check-circle" style="color: var(--fern-green); margin-right: var(--space-xs);"></i> Behavioural science for engagement</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left;">
+                            <ul style="list-style: none;">
+                                <li style="margin-bottom: var(--space-sm);"><i class="fas fa-check-circle" style="color: var(--fern-green); margin-right: var(--space-xs);"></i> End-to-end research support</li>
+                                <li style="margin-bottom: var(--space-sm);"><i class="fas fa-check-circle" style="color: var(--fern-green); margin-right: var(--space-xs);"></i> Implementation science approaches</li>
+                                <li style="margin-bottom: var(--space-sm);"><i class="fas fa-check-circle" style="color: var(--fern-green); margin-right: var(--space-xs);"></i> User testing and impact assessment</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: var(--space-lg);">Our industry partners value THRIVE's ability to combine human-centred design, rigorous scientific methods, and practical insight into how people engage with technology in their daily lives. We specialise in bridging the gap between innovative ideas and usable, effective tools that make a genuine difference to health and wellbeing.</p>
+                    
+                    <div style="margin-top: var(--space-xl);">
+                        <p style="font-style: italic; color: var(--tiger-orange); font-weight: 600;">If you are an industry collaborator interested in evidence-based development, user experience refinement, or robust evaluation of digital health products, THRIVE offers a uniquely interdisciplinary and impact-focused partnership model.</p>
+                    </div>
+                    
+                    <div style="margin-top: var(--space-xl);">
+                        <a href="mailto:F.Matcham@sussex.ac.uk" class="btn btn-primary">
+                            <i class="fas fa-handshake"></i> Discuss Collaboration
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="industry-partners">
+                    <span class="partner-tag">Pfizer</span>
+                    <span class="partner-tag">Clean Slate Clinic</span>
+                    <span class="partner-tag">RADAR-CNS</span>
+                    <span class="partner-tag">Digital Health Start-ups</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Join Us Section -->
     <section id="join" class="section join-section">
         <div class="container">
-            <h2 class="section-title">Join the Thrive Lab</h2>
+            <h2 class="section-title">Join the THRIVE Lab</h2>
             <p class="section-subtitle">We're always looking for passionate researchers at all levels</p>
             
             <div class="opportunities-grid">
                 <div class="opportunity-card">
                     <h3 class="opportunity-title">Postdoctoral Positions</h3>
-                    <p class="opportunity-desc">We have openings for postdocs in cognitive neuroscience, computational modeling, and intervention development.</p>
+                    <p class="opportunity-desc">We have openings for postdocs in digital health, computational modeling, human-centred design, and intervention development.</p>
                     <ul class="opportunity-list">
                         <li><i class="fas fa-check"></i> 2-year positions with possible extension</li>
                         <li><i class="fas fa-check"></i> Competitive salary and benefits</li>
@@ -1759,7 +2008,7 @@
                 </div>
                 
                 <div class="opportunity-card">
-                    <h3 class="opportunity-title">Graduate Students</h3>
+                    <h3 class="opportunity-title">PhD Studentships</h3>
                     <p class="opportunity-desc">We accept PhD students through the Cognitive Science, Psychology, and Neuroscience graduate programs.</p>
                     <ul class="opportunity-list">
                         <li><i class="fas fa-check"></i> Fully-funded positions</li>
@@ -1783,7 +2032,7 @@
             
             <div class="lab-culture">
                 <h3>Our Lab Culture</h3>
-                <p>At Thrive Lab, we believe that a supportive, collaborative environment is essential for scientific innovation and personal growth. We value:</p>
+                <p>At THRIVE, we believe that a supportive, collaborative environment is essential for scientific innovation and personal growth. We value:</p>
                 <div class="culture-values">
                     <div class="value-item">
                         <i class="fas fa-hands-helping"></i>
@@ -1817,9 +2066,9 @@
                 <div class="footer-brand">
                     <div class="footer-logo-container">
                         <img src="https://raw.githubusercontent.com/thrive-labb/thrive-labb.github.io/refs/heads/main/image.png" alt="Thrive Lab Logo" class="footer-logo-img">
-                        <span class="footer-logo-text">Thrive Lab</span>
+                        <span class="footer-logo-text">THRIVE Lab</span>
                     </div>
-                    <p class="footer-mission">University of Sussex • Advancing human potential through interdisciplinary research</p>
+                    <p class="footer-mission">Technology for Healthcare Research and Intervention in Everyday Life • University of Sussex</p>
                     <div class="footer-social">
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                         <a href="https://github.com/thrive-labb/thrive-labb.github.io" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
@@ -1831,8 +2080,8 @@
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4 class="footer-heading">Research</h4>
-                        <a href="#" class="footer-link">Projects</a>
-                        <a href="#" class="footer-link">Publications</a>
+                        <a href="#research" class="footer-link">Projects</a>
+                        <a href="#publications" class="footer-link">Publications</a>
                         <a href="#" class="footer-link">Tools & Software</a>
                         <a href="#" class="footer-link">Datasets</a>
                     </div>
@@ -1849,14 +2098,14 @@
                         <h4 class="footer-heading">Connect</h4>
                         <a href="mailto:F.Matcham@sussex.ac.uk" class="footer-link">Contact Information</a>
                         <a href="https://profiles.sussex.ac.uk/p199181-faith-matcham" class="footer-link" target="_blank">University Profile</a>
-                        <a href="#" class="footer-link">News & Events</a>
-                        <a href="#" class="footer-link">Subscribe to Newsletter</a>
+                        <a href="#industry" class="footer-link">Collaborate with Us</a>
+                        <a href="#" class="footer-link">Newsletter</a>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2026 Thrive Lab, University of Sussex. This website is open source.</p>
+                <p class="copyright">&copy; 2026 THRIVE Lab, University of Sussex. This website is open source.</p>
                 <div class="footer-legal">
                     <a href="https://github.com/thrive-labb/thrive-labb.github.io" class="legal-link" target="_blank">GitHub Repository</a>
                 </div>
